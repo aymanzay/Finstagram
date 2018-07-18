@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Finstagram/Controller/SignUpVC.swift"
+            timestampString = "553513704.727015"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Finstagram.SignUpVC.signUpButton(Any) -&gt; ()"
+                  moduleName = "Finstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AymanZAY/ios/Finstagram/Finstagram/Controller/SignUpVC.swift"
+                  timestampString = "552535507.9426529"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "73"
+                  endingLineNumber = "73"
+                  offsetFromSymbolStart = "355">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__ObjC.AuthDataResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Finstagram.SignUpVC.signUpButton(Any) -&gt; ()"
+                  moduleName = "Finstagram"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AymanZAY/ios/Finstagram/Finstagram/Controller/SignUpVC.swift"
+                  timestampString = "552535507.946261"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "21">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
