@@ -53,7 +53,9 @@ class DBProvider {
                 return
             }
             print("Database Completed")
+            print(Thread.isMainThread) //true
             ProgressHUD.showSuccess("Success")
+            
         })
     }
 

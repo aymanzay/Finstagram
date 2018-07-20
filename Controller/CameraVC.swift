@@ -14,16 +14,22 @@ class CameraVC: UIViewController {
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var captionTextView: UITextView!
     @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var removeButton: UIButton!
     
     private var selectedImage: UIImage?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.handleSelectPhoto))
-        captionTextView.text = ""
+        
+        clean()
+        
+        shareButton.isEnabled = false
+        shareButton.backgroundColor = .lightGray
         
         photo.addGestureRecognizer(tapGesture)
         photo.isUserInteractionEnabled = true
+        removeButton.isEnabled = false
         
     }
     
@@ -31,6 +37,36 @@ class CameraVC: UIViewController {
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         present(pickerController, animated: true, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        handleHost()
+    }
+    
+    func handleHost() {
+        if selectedImage != nil { //when a photo is selected
+            shareButton.isEnabled = true
+            removeButton.isEnabled = true
+            shareButton.backgroundColor = .black
+        }else{
+            shareButton.isEnabled = false
+            removeButton.isEnabled = false
+            
+            shareButton.backgroundColor = .lightGray
+            shareButton.setTitleColor(.black, for: .disabled)
+        }
+    }
+    
+    @IBAction func removeButtonPressed(_ sender: Any) {
+        clean()
+        handleHost()
+    }
+    
+    func clean() {
+        photo.image = #imageLiteral(resourceName: "placeholder-photo")
+        captionTextView.text = ""
+        selectedImage = nil
     }
     
     
@@ -45,6 +81,11 @@ class CameraVC: UIViewController {
         } else {
             ProgressHUD.showError("Image not found.")
         }
+        
+        self.tabBarController?.selectedIndex = 0
+        photo.image = #imageLiteral(resourceName: "placeholder-photo")
+        captionTextView.text = ""
+        selectedImage = nil
     }
     
 } // end of class
